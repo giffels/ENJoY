@@ -1,0 +1,17 @@
+version: '3'
+services:
+  nginx-proxy:
+    container_name: nginx-proxy
+    build: ./nginx-proxy
+    ports:
+     - "80:80"
+     - "443:443"
+    links:
+     - jupyterhub
+
+  jupyterhub:
+    container_name: jupyterhub
+    build: ./jupyter-hub
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      #- /tmp/schrott:/home/giffels
