@@ -587,6 +587,6 @@ c.JupyterHub.hub_ip = 'jupyterhub'
 c.JupyterHub.spawner_class = 'dockerspawner.SystemUserSpawner'
 c.DockerSpawner.image = 'giffels/jupyter-worker'
 c.DockerSpawner.use_internal_ip = True
-c.DockerSpawner.network_name = 'jupyterdocker_default'
+c.DockerSpawner.network_name = 'enjoy_default'
 c.DockerSpawner.remove_containers = True
 c.DockerSpawner.hub_ip_connect = 'jupyterhub'
