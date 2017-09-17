@@ -9,7 +9,7 @@ function create_host_cert() {
 }
 
 function check_host_cert(){
-  if [ -f $CERTIFICATES ]; then
+  if [ -f $CERTIFICATE ]; then
     if ! openssl x509 -checkend 2592000 -noout -in $CERTIFICATE; then
       rm $CERTIFCATE
       create_host_cert
